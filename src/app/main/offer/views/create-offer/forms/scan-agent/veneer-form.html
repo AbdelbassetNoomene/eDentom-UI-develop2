@@ -1,0 +1,78 @@
+<div class="md-inline-form">
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Abformung" ng-model="vm.veneer.Abformung"
+                   placeholder="Abformung (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="veneer.$error"
+                 ng-show="veneer.Abformung.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Abformung field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Bissregistrat" ng-model="vm.veneer.Bissregistrat"
+                   placeholder="Bissregistrat (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="venner.Bissregistrat.$error"
+                 ng-show="veneer.Bissregistrat.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Bissregistrat field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Archivierung" ng-model="vm.veneer.Archivierung"
+                   placeholder="Archivierung (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="veneer.$error"
+                 ng-show="veneer.Archivierung.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Archivierung field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Design" ng-model="vm.veneer.Design"
+                   placeholder="Design (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="venner.Design.$error"
+                 ng-show="veneer.Design.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Design field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+    </div> 
+
+    <div layout="row">
+        <span flex="40"></span>
+
+        <div>
+
+            <span class="h4"> Preisstaffelung von  </span> 
+
+            <md-input-container class="w-50">
+              <input type="number" name="promotion" min="0" max="100" aria-label="promotion" ng-model="vm.veneer.promotion"> 
+            </md-input-container>
+
+            <span class="h4 ph-30"> % ab </span>
+
+            <md-input-container class="w-50">
+              <input type="number" name="teeth-number" min="0" max="100" aria-label="teeth-number" ng-model="vm.veneer.teethNumber"> 
+            </md-input-container> 
+
+            <span class="h4 ph-30"> VENEER auf dem gesamten Preis. </span>
+        </div>
+    </div>
+</div>

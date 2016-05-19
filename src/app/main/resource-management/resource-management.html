@@ -1,0 +1,93 @@
+<div id="resource-management"> 
+
+    <!-- HEADER -->
+    <div class="header sky-blue-bg h-120" layout="row" layout-align="start center">
+
+        <div class="search pl-50" flex layout="row" layout-align="start center">
+            <md-icon md-font-icon="icon-magnify" class="icon search-icon"></md-icon>
+
+            <input class="search-input" ng-model="vm.search" type="text" placeholder="Search.." translate
+                   translate-attr-placeholder="RESOURCE_MANAGEMENT.SEARCH" flex>
+        </div>
+
+        <md-menu class="search-settings" md-position-mode="target-right target">
+            <md-button class="md-icon-button" ng-click="$mdOpenMenu()" aria-label="Search settings" translate translate-attr-aria-label="RESOURCE_MANAGEMENT.SEARCH_SETTINGS">
+                <md-icon md-menu-origin md-menu-align-target md-font-icon="icon-cog" class="icon s16"></md-icon>
+            </md-button>
+
+            <md-menu-content width="3">
+                <md-menu-item>
+                    <md-button ng-click="vm.dummyFunction()">
+                        <p translate="RESOURCE_MANAGEMENT.SETTINGS_1">Settings 1</p>
+                    </md-button>
+                </md-menu-item>
+
+                <md-menu-item>
+                    <md-button ng-click="vm.dummyFunction()">
+                        <p translate="RESOURCE_MANAGEMENT.SETTINGS_2">Settings 2</p>
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </div>
+    <!-- / HEADER -->
+
+    <md-tabs md-dynamic-height flex> 
+        <md-tab>
+            <md-tab-label>
+                <span translate="RESOURCE_MANAGEMENT.SKILLS.TITLE"> SKILLS </span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class="timeline-tab"
+                            ng-include="'app/main/resource-management/views/skills.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+
+        <md-tab>
+            <md-tab-label>
+                <span translate="RESOURCE_MANAGEMENT.PERSONEL"> PERSONEL </span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class=" "
+                            ng-include="'app/main/resource-management/views/personel.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+
+        <md-tab>
+            <md-tab-label>
+                <span translate="RESOURCE_MANAGEMENT.INSTRUMENT"> INSTRUMENT </span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class=" "
+                            ng-include="'app/main/resource-management/views/instrument.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+
+        <md-tab>
+            <md-tab-label>
+                <span translate="RESOURCE_MANAGEMENT.Availability_Time"> Availability_Time </span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class=" "
+                            ng-include="'app/main/resource-management/views/availability-time.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+
+        <md-tab>
+            <md-tab-label>
+                <span translate="RESOURCE_MANAGEMENT.PRICE"> PRICE </span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class=" "
+                            ng-include="'app/main/resource-management/views/coste.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+   </md-tabs>  
+</div>
+
+<md-content ng-include="'app/footer/footer.html'"> </md-content>

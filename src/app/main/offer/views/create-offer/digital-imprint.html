@@ -1,0 +1,21 @@
+<form name="stepper" my-stepper ng-submit="vm.submitStepper()" ng-model="vm.stepper" novalidate>
+    <my-stepper-step ng-form="step1" step="1" step-title="'Veneer'" optional-step>
+        <div ng-include="'app/main/offer/views/create-offer/forms/3d-design/veneer-form.html'"></div>
+    </my-stepper-step>
+
+    <my-stepper-step ng-form="step2" step="2" step-title="'Krone'" optional-step>
+        <div ng-include="'app/main/offer/views/create-offer/forms/3d-design/Krone-form.html'"></div>
+    </my-stepper-step>
+
+    <my-stepper-step ng-form="step3" step="3" step-title="'Brücke (3 Glieder)'" optional-step>
+        <div ng-include="'app/main/offer/views/create-offer/forms/3d-design/bridge-form.html'"></div>
+    </my-stepper-step>
+
+    <my-stepper-step ng-form="step4" step="4" step-title="'In-Onlay'" optional-step>
+       <div ng-include="'app/main/offer/views/create-offer/forms/3d-design/in-Onlay-form.html'"></div>>
+    </my-stepper-step>
+
+    <my-stepper-step ng-form="step5" step="5" step-title="'Implantat'" optional-step>
+        <div ng-include="'app/main/offer/views/create-offer/forms/3d-design/implantat-form.html'"></div>
+    </my-stepper-step> 
+</form> 

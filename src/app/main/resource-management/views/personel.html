@@ -1,0 +1,48 @@
+<md-content>
+    <md-table-container>
+        <table md-table md-progress="vm.promise"><!--multiple-->
+            <thead md-head md-order="vm.query.order" md-on-reorder="vm.onReorder">
+                <tr md-row>
+                    <th md-column > </th>
+                    <!-- <th md-column md-order-by="firstname" translate="RESOURCE_MANAGEMENT.PERSONEL_LIST.FIRSTNAME">Vorname </th>
+                    <th md-column md-order-by="lastname" translate="RESOURCE_MANAGEMENT.PERSONEL_LIST.LASTNAME">Nachname </th>
+                    <th md-column md-order-by="email" translate="RESOURCE_MANAGEMENT.PERSONEL_LIST.EMAIL">E-mail </th>
+                    <th md-column md-order-by="competance" translate="RESOURCE_MANAGEMENT.PERSONEL_LIST.SKILLS">Kompetenzen </th> -->
+                    <th md-column md-order-by="firstname"  >Vorname </th>
+                    <th md-column md-order-by="lastname"  >Nachname </th>
+                    <th md-column md-order-by="email"  >E-mail </th>
+                    <th md-column md-order-by="competence"  >Kompetenzen </th>
+                    <th md-column > </th> 
+
+                </tr>
+            </thead>
+            <tbody md-body> 
+
+                <tr md-row data-ng-repeat="per in vm.personel| orderBy: vm.query.order| limitTo: vm.query.limit: (vm.query.page -1) * vm.query.limit"> 
+
+                    <td md-cell> <img class="avatar" ng-src="{{per.avatar}}"> </td>
+
+                    <td md-cell> <strong> {{ per.firstname }} </strong> </td> 
+
+                    <td md-cell> <strong> {{ per.lastname }} </strong> </td> 
+
+                    <td md-cell> <strong> {{ per.email }} </strong> </td> 
+
+                    <td md-cell> <strong> {{ per.competence }} </strong> </td> 
+
+                    <td md-cell> 
+                        <md-button ng-click="editPersonel()" aria-label="Edit Personel">
+                          <md-icon md-font-icon="icon-pencil" class="s20"></md-icon>
+                        </md-button>
+                        <md-button ng-click="removePersonel()" aria-label="Remove Personel">
+                          <md-icon md-font-icon="icon-delete" class="s20"></md-icon>
+                        </md-button>
+                    </td>    
+                </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="{{vm.personel.length}}" md-on-paginate="vm.onPaginate" md-page-select>
+    </md-table-pagination>
+</md-content>

@@ -1,0 +1,45 @@
+<div id="offer">
+
+    <md-toolbar class="md-accent pink-A100-bg">
+        <div class="md-toolbar-tools">
+            <span flex></span>
+            <span class="title" translate="STEPS.OFFER_MANAGEMENT.TITLE">  (Offer Management) </span>
+            <span flex></span> 
+        </div>
+    </md-toolbar>
+
+    <md-tabs md-dynamic-height flex> 
+        <md-tab>
+            <md-tab-label>
+                <span translate="STEPS.OFFER_MANAGEMENT.SCAN_AGENT">Scan-Agent</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class="timeline-tab"
+                            ng-include="'app/main/offer/views/create-offer/scan-agent.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+        <md-tab>
+            <md-tab-label>
+                <span translate="FILTER.DIGITIZE_IMPRINT">DIGITIZE_IMPRINT</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class=" "
+                            ng-include="'app/main/offer/views/create-offer/digital-imprint.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+
+        <md-tab>
+            <md-tab-label>
+                <span translate="FILTER.3D_DESGIN">3D_DESGIN</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class=" "
+                            ng-include="'app/main/offer/views/create-offer/3d-desgin.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+   </md-tabs>  
+</div>
+<md-content ng-include="'app/footer/footer.html'"> </md-content>

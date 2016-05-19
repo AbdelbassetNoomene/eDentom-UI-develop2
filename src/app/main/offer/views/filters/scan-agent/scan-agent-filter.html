@@ -1,0 +1,19 @@
+<form name="stepper" my-stepper ng-submit="vm.submitStepper()" ng-model="vm.stepper" novalidate>
+
+    <my-stepper-step ng-form="step1" step="1" step-title="'Wahl Mobiler Scan-Agent'">
+        <div ng-include="'app/main/offer/views/filters/scan-agent/steps/choice-scan-agent.html'"></div>
+    </my-stepper-step>
+
+    <my-stepper-step ng-form="step2" step="2" step-title="'Angebot validieren'">
+        <div ng-include="'app/main/offer/views/filters/scan-agent/steps/step-one.html'"></div>
+    </my-stepper-step>
+
+    <my-stepper-step ng-form="step3" step="3" step-title="'Scan-Operation wählen'">
+        <div ng-include="'app/main/offer/views/filters/scan-agent/steps/step-two.html'"></div>
+    </my-stepper-step>
+
+    <my-stepper-step ng-form="step4" step="4" step-title="'Auftrag vergeben'">
+        <div ng-include="'app/main/offer/views/filters/scan-agent/steps/step-three.html'"></div>
+    </my-stepper-step>
+</form>
+<!-- / STEPPER -->

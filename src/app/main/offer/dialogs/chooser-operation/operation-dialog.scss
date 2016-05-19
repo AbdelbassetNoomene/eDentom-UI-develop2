@@ -1,0 +1,51 @@
+md-dialog {
+
+    &.chooser-operation-dialog {
+        max-width: 560px;
+        width: 560px;
+
+        md-dialog-content {
+            position: relative;
+            display: block; 
+        }
+
+        md-toolbar {
+
+            .md-toolbar-tools {
+                position: relative;
+                background-color: #40ced8;
+
+                .title {  
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                md-icon {
+                    float: right;
+                }
+            }
+        } 
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-sm) {
+
+    md-dialog {
+
+        &.event-detail-dialog {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: $layout-breakpoint-xs) {
+
+    md-dialog {
+
+        &.event-detail-dialog {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,288 @@
+#offer {
+    #map_canvas {   
+        z-index: 1;
+        
+        .pannel-cookies {
+            z-index: 4; 
+            border: 2px solid pink;
+            position: absolute;
+            margin-top: -175px;
+            margin-left: 70px; 
+            background-color: white; 
+            position: absolute;
+            padding-top: 20px;
+            padding-left: 35px;
+            padding-right: 35px;
+
+            img {
+                width: 23px;
+                z-index: 3;
+                margin-top: -30px;
+                margin-left: 275px;
+            }
+
+            button {
+                color: white;
+                font-weight: bold;
+            }
+        } 
+    }
+
+    #markerLayer img {
+        border: 4px solid #55ff00 !important;
+        width: 50% !important;
+        height: 40% !important;
+        border-radius: 50%;
+    }  
+
+	md-tabs-canvas { 
+	    background-color:  #40ced8;
+	}
+	md-tabs .md-tab, md-tabs .md-tab { 
+	    border-left: 1px solid #FFFFFF; 
+	    color: #FFFFFF;
+	}
+	md-tabs  {  
+	    background-color: white;
+        .md-text {
+            font-size: 75%;
+        }
+
+        .md-input {
+            font-size: 75%;
+        } 
+	    .md-subhead {
+            color: #40ced8;
+            margin-top: -40px; 
+            margin-bottom: -3px;
+            font-weight: bold;
+            font-size: 75%;
+        }
+        .subhead { 
+            margin-bottom: -5px;
+            font-weight: bold;
+            font-size: 75%;
+        }
+        .bold {  
+            font-weight: bold; 
+        }
+        .h3 {
+            color: #40ced8; 
+            margin-bottom: -10px;
+            font-weight: bold;
+        }
+        .h4 {  
+		    margin-bottom: -10px;
+		    font-weight: bold;
+		}
+		h1.md-title { 
+		    margin-bottom: -20px;
+            font-size: 75%;
+            font-weight: bold;
+		}
+        md-datepicker { 
+           /* margin: -18px;*/ 
+        }
+	}
+	md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+	    background-color: white; 
+	    color: rgba(117, 117, 117, 0.64);
+	}
+    md-toolbar {
+
+        border-bottom: 1px solid white;
+    }
+
+    .ms-stepper {
+
+        .ms-stepper-horizontal {
+            background: #FFFFFF;
+            box-shadow: $whiteframe-shadow-1dp;
+
+            .md-button {
+                color: #FFFFFF;
+            }
+
+            .ms-stepper-navigation-wrapper {
+
+                .ms-stepper-navigation {
+                    height: 72px;
+                    min-height: 72px;
+                    max-height: 72px;
+                    background: rgba(158, 158, 158, 0.18);
+                    box-shadow: $whiteframe-shadow-1dp;
+
+                    .ms-stepper-navigation-item {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        position: relative;
+                        height: 72px;
+                        min-height: 72px;
+                        max-height: 72px;
+                        line-height: 24px;
+                        margin: 0; 
+                        border-radius: 0;
+                        cursor: pointer;
+                        font-size: 11px;
+                        text-transform: none;
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            width: 24px;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                        }
+
+                        &:before {
+                            left: 0;
+                        }
+
+                        &:after {
+                            right: 0;
+                        }
+
+                        &:first-child {
+
+                            &:before {
+                                display: none;
+                            }
+                        }
+
+                        &:last-child {
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+
+                        &.current {
+
+                            .step {
+
+                            }
+
+                            .title {
+                                font-weight: 600;
+                                color: rgba(0, 0, 0, 0.87);
+                            }
+                        }
+
+                        &.disabled {
+                            cursor: default;
+
+                            .step {
+                                background: rgba(0, 0, 0, 0.12);
+                            }
+
+                            .title {
+                                color: rgba(0, 0, 0, 0.27);
+                            }
+
+                            .subtitle {
+                                color: rgba(0, 0, 0, 0.27);
+                            }
+                        }
+
+                        &.optional {
+                            padding: 16px 24px;
+                        }
+
+                        .step {
+                            width: 24px;
+                            min-width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            margin: 0 8px 0 16px;
+                            color: #FFFFFF;
+
+                            .icon {
+                                color: #FFFFFF;
+                                font-weight: bold;
+                                line-height: 24px !important;
+                            }
+                        }
+
+                        .title {
+                            padding-right: 16px;
+                            color: rgba(0, 0, 0, 0.54);
+                        }
+
+                        .subtitle {
+                            font-size: 12px;
+                            padding-right: 16px;
+                            color: rgba(0, 0, 0, 0.54);
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+
+            .ms-stepper-steps {
+                padding: 24px 16px;
+            }
+
+            .ms-stepper-controls {
+                padding: 0 16px 16px 16px;
+
+                .ms-stepper-dots {
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 16px;
+
+                    span {
+                        width: 5px;
+                        height: 5px;
+                        margin: 0 4px;
+                        border-radius: 50%;
+
+                        &:not(.md-accent-bg) {
+                            background: rgba(0, 0, 0, 0.12);
+                        }
+
+                        &.selected {
+                            width: 8px;
+                            height: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+
+// Padding helpers for Negatibve values
+// Multiples of 5, max:100
+@for $i from 0 through 20 {
+
+    .padding-neg-#{$i * 5},
+    .p-neg-#{$i * 5} {
+        padding: #{($i * -5) + 'px'};
+    }
+}
+// Margin helpers for Negatibve values
+// Multiples of 5, max:100
+@for $i from 0 through 20 {
+
+    .margin-neg-#{$i * 5},
+    .m-neg-#{$i * 5} {
+        margin: #{($i * -5) + 'px'};
+    }
+}
+
+// Margin top helpers for Negative values
+// Multiples of 5, max:100
+@for $i from 0 through 20 {
+
+    .margin-top-neg-#{$i * 5},
+    .mt-neg-#{$i * 5} {
+        margin-top:  #{($i * -5) + 'px'};
+    }
+}

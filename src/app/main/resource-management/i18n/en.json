@@ -1,0 +1,34 @@
+{
+    "RESOURCE_MANAGEMENT": {
+
+        "SEARCH": "Search",
+        "SEARCH_SETTINGS": "SEARCH SETTINGS",
+        "SETTINGS_1": "SETTINGS 1",
+        "SETTINGS_2": "SETTINGS 2",
+        
+         
+        "RESOURCE_MANAGEMENT_NAV": "Ressourcen Management",
+        "PERSONEL": "Personal",
+        "INSTRUMENT": "Instrument",
+        "Availability_Time": "Verfügbarkeit/Zeit",
+        "PRICE": "Preis",
+
+        "SKILLS": {
+            "TITLE": "Kompetenz",
+            "SKILLS_MANAGEMENT": "Skills Management",
+            "INTRAORAL": "3D-Scanning Intraoral",
+            "EXTRAORAL": "3D-Scanning Extraoral",
+            "IMPRINT": "3D-Abdruck Abformung",
+            "DESIGN": "3D Dsign",
+            "SIMULATION": "QM Simulation",
+            "CNC_PRODUCTION": "CNC Production",
+            "PURCHASE": "Einkauf" 
+        },
+        "PERSONEL_LIST": {
+            "FIRSTNAME": "Vorname",
+            "LASTNAME": "Nachname", 
+            "SKILLS": "Skills ",
+            "EMAIL": "E-mail " 
+        }  
+    }
+}

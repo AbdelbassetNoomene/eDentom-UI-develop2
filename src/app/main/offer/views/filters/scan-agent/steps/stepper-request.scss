@@ -1,0 +1,433 @@
+#info-labo {
+	line-height: 12px;
+}
+
+.sky-blue-bg {
+	background-color: #40ced8;
+} 
+
+.vertical-separator {
+	background-color: rgba(128, 128, 128, 0.56);
+	width: 2px;
+	height: 85%;
+}
+
+.header-request {
+	#info {
+		color: grey;
+		height:125px; 
+		.md-title {
+			color: #40ced8;
+		}
+		.md-subhead {
+			color: black;
+		}
+		.h6 {
+			font-style: italic;
+		}
+	}
+	.profile  {
+		float: right;
+		height:50%;
+		width: 50%;
+		border-radius: 50%; 
+		border: 3px solid #40ced8;
+	}
+
+	#panner {
+		height:35px;
+		background-color: #40ced8;
+		img {
+		    height: 25px; 
+		}
+		span {
+			color:white; 
+		}
+		.separator {
+			border-left: 1px solid #FFFFFF;; 
+		}
+		.profile-img {
+			float: right;
+			height:80%;
+			width: 75%;
+			border-radius: 50%;
+			margin-top:-65%; 
+			border: 3px solid #40ced8;
+		}
+	}
+}
+
+#request-step-one {
+
+	.content { 
+		#picture-instrument {
+			height: 100px; 
+			border : 1px solid rgba(158, 158, 158, 0.85);
+			img {
+				height: 100px;
+				width: 100%;
+			} 
+		}
+		.md-title {
+		
+		}
+		.md-subhead {
+
+		}
+		table {
+			width: 100%;
+			thead {
+				color: white;
+				background-color: #40ced8;
+				th {
+					font-size: 0.85em;
+					text-align: center;
+				}
+			}
+			tbody {
+
+				tr:nth-child(odd) {
+					background-color: #ededed;
+				}
+				td {
+					color:  #40ced8;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.footer {
+
+	}
+}
+
+#request-step-two {
+	.header {
+		#info {
+			color: grey;
+			height:125px; 
+			.md-title {
+				color: #40ced8;
+			}
+			.md-subhead {
+				color: black;
+			}
+			.h6 {
+				font-style: italic;
+			}
+		}
+
+		#panner {
+			height:35px;
+			background-color: #40ced8;
+			img {
+			    height: 25px; 
+			}
+			span {
+				color:white; 
+			}
+			.separator {
+				border-left: 1px solid #FFFFFF;; 
+			}
+			.profile-img {
+				float: right;
+				height:80%;
+				width: 75%;
+				border-radius: 50%;
+				margin-top:-65%; 
+				border: 3px solid #40ced8;
+			}
+		}
+	}
+
+	.content {
+		.schema-dental {
+			/*background-image: url("../assets/images/backgrounds/schema-bg.png"); */
+			background-image: url("../assets/images/backgrounds/FondNumTooth.png"); 
+		    background-position: right;
+		    background-size: 100%;
+		    background-repeat:no-repeat; 
+
+		    .up-1 {   
+		    	background-repeat:no-repeat;
+		        background-position-y: 33px;
+			    background-position-x: 55px;
+			    background-size: 50%; 
+
+			    #tooth-11 {
+	    	        width: 23px;
+				    margin-left: -3px;
+				    margin-top: 28px;
+			    } 
+			    #tooth-12 {
+		            width: 22px;
+				    margin-top: 32px;
+				    margin-left: 12px; 
+			    } 
+			    #tooth-13 {
+	    	        width: 32%;
+				    margin-top: 45px;
+				    margin-left: 60px;
+			    } 
+
+			    #tooth-21 {
+	    	        width: 23px;
+				    margin-left: -14px;
+				    margin-top: 28px;
+			    } 
+			    #tooth-22 {
+    	            width: 22px;
+				    margin-top: 34px;
+				    margin-left: -29px;
+			    } 
+			    #tooth-23 {
+		            width: 21px;
+				    margin-top: 46px;
+				    margin-left: -50px;
+					height: 20px;	
+			    } 
+		    }
+		    .up-2 {     
+		    	background-repeat:no-repeat;    
+    			background-position-x: 33px;  
+	    	    background-size: 72.75%;
+
+		    	#tooth-14 {
+	                width: 20px;
+				    margin-top: -5px;
+				    margin-left: 50px;
+			    } 
+			    #tooth-15 {
+	        	    width: 20px;
+				    margin-top: -2px;
+				    margin-left: 42px;    	 
+			    } 
+			    #tooth-16 {
+	                width: 25px;
+				    margin-top: -2px;
+				    margin-left: 35px;     
+			    } 
+			    #tooth-17 {
+	    	        width: 25px;
+				    margin-top: -4px;
+				    margin-left: 30px;        
+			    } 
+			    #tooth-18 {
+	    	        width: 27px;
+				    margin-top: -2px;
+				    margin-left: 27px;       
+			    } 
+		    }
+		    .up-3 {   
+		    	background-repeat:no-repeat;
+		        background-size: 72.75%;;
+
+			    #tooth-24 {
+			   	    width: 25px;
+				    margin-top: -4px;
+				    margin-left: 40px; 
+			    } 
+			    #tooth-25 {
+    	            width: 27px;
+				    margin-top: 13px;
+				    margin-left: -15px;
+			    } 
+			    #tooth-26 {
+	                width: 26px;
+				    margin-left: -20px;
+				    margin-top: 33px;
+			    } 
+			    #tooth-27 {
+                    width: 28px;
+				    margin-left: -22px;
+				    margin-top: 55px; 
+			    } 
+			    #tooth-28 {
+                    width: 30px;
+				    margin-left: -25px;
+				    margin-top: 80px; 
+			    } 
+		    }
+		    .down-1 {   
+		    	background-repeat:no-repeat;    
+		    	background-position-x: 70px;
+    			background-size: 40%; 
+
+			    #tooth-31 {
+    	            width: 20px;
+				    margin-top: 15px;
+				    margin-left: -40px;    
+			    } 
+			    #tooth-32 {
+		            width: 20px;
+				    margin-top: 7px;
+				    margin-left: -35px;
+			    } 
+			    #tooth-33 {
+    	            width: 22px;
+				    margin-top: -2px;
+				    margin-left: 33px;
+			    } 
+
+			    #tooth-41 {
+		    	    width: 20px;
+				    margin-top: -30px;
+				    margin-left: 100px;  
+			    } 
+			    #tooth-42 {
+                    width: 20px;
+				    margin-top: -15px;
+				    margin-left: 81px;  
+			    } 
+			    #tooth-43 {
+                    width: 27px;
+				    margin-top: -2px;
+				    margin-left: 65px;   
+			    } 
+		    }
+		    
+		    .down-2 {   
+		    	background-repeat:no-repeat;
+			    background-position-y: 12px;
+			    background-position-x: 36px;
+			    background-size: 70%;
+
+			    #tooth-44 {
+		   	        margin-top: -5px;
+				    height: 20px;
+				    width: 25px;
+				    margin-left: 55px;   
+			    } 
+			    #tooth-45 {
+	                margin-top: -5px;
+				    height: 23px;
+				    width: 25px;
+   					margin-left: 47px;  
+			    } 
+			    #tooth-46 {
+                    margin-top: -4px;
+				    height: 23px;
+				    width: 27px;
+				    margin-left: 40px; 
+			    } 
+			    #tooth-47 {
+                    margin-top: -2px;
+				    height: 22px;
+				    width: 30px;
+				    margin-left: 33px;
+			    } 
+			    #tooth-48 {
+                    margin-top: 12px;
+				    margin-left: 30px;
+				    height: 25px;
+				    width: 32px;
+			    } 
+		    }
+
+		    .down-3 {     
+		    	background-repeat:no-repeat;
+	            background-position-y: 12px; 
+			    background-size: 70%; 
+
+		    	#tooth-34 {
+                    width: 25px;
+					margin-top: -2px;
+					margin-left: 40px;  
+			    } 
+			    #tooth-35 {
+		        	width: 30px;
+				    margin-top: -3px;
+				    margin-left: 47px;	 
+			    } 
+			    #tooth-36 {
+                    width: 28px;
+				    margin-top: -3px;
+				    margin-left: 55px;      
+			    } 
+			    #tooth-37 {
+    	            width: 30px;
+				    margin-top: -3px;
+				    margin-left: 58px;    
+			    } 
+			    #tooth-38 {
+	                width: 32px;
+				    margin-top: 12px;
+				    margin-left: 55px;        
+			    } 
+		    }
+		}
+
+		#choosing-of-process {
+
+			md-input-container {
+				input {
+			    	border: 2px solid rgba(128, 128, 128, 0.29);
+	    			border-radius: 5px;
+	    			text-align: center;
+	    			color: #40ced8;
+				}
+			}
+			.avatar {
+				border: 1px solid rgba(128, 128, 128, 0.29);
+			}
+		}
+	}
+}
+
+
+#request-step-three { 
+	.content {
+		text-align: center;
+		color:white;
+		.head {
+		    font-size: small;
+    		text-transform: uppercase;
+			text-align: center;
+		    color: white;
+		    padding: 5px;
+		    background-color: rgba(49, 46, 39, 0.79);
+		    border: 2px solid white;
+		}
+		.scan-operation {
+			.head {
+				font-size: small;
+    			text-transform: uppercase;
+
+				img {
+					float: right; 
+				}
+			}
+		}
+		.detail { 
+			color: white;
+		    font-size: smaller;  
+		}
+		.place-order {
+		    color: white;
+		    margin-left: 33%;
+		    margin-right: 33%;
+		    text-align: center;
+		    border-radius: 5px;
+		}
+	}
+}
+
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-sm) {
+
+    #step-one {
+
+        .header {
+
+            .profile-image {
+                margin: 0 0 16px 0;
+            }
+
+            .name {
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+}

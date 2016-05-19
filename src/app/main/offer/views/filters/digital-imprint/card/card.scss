@@ -1,0 +1,43 @@
+.ms-card {
+
+    .template {
+
+        .info {
+            height: 57%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            .rating {
+                background: rgba(0, 0, 0, 0.75);
+                height: 30%;
+                .icon-checkbox-marked-circle {
+                    color: #55ff00;
+                } 
+            }
+            .detail {
+                height: 70%;
+                background-color: rgb(245,245,245);
+                color: #40ced8 ;
+            }
+            .h5 {
+                color : grey;
+                line-height: 12px;
+            }
+            .h4 { 
+
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.75);
+            }
+        }
+
+        .media {
+            z-index: 1;
+
+            .image {
+                width: 100%;
+            }
+        }  
+    }
+}

@@ -1,0 +1,99 @@
+<div layout="column">
+
+	<div>
+		<div class="h3" translate="FILTER.YOU_ARE">YOU ARE</div> 
+		<HR>
+		<div class="margin-top-neg-15" layout="row" layout-xs="column"> 
+			<div flex="5"></div>
+			<div flex="30" flex-xs="100" class="ph-5 mt-5"> 
+			    <md-select placeholder="Assign to user" ng-model="user" md-on-open="loadUsers()">
+			      <md-option ng-value="Zahnarzt" ng-selected="true" translate="FILTER.DENTIST">DENTIST</md-option>
+			      <md-option ng-value="user" ng-repeat="user in ['Dental Labor','Agent']">{{user}}</md-option>
+			    </md-select> 
+			</div>
+
+			<div flex="35" flex-xs="100">
+				<div class="ph-5" layout="column">
+					<h1 class="md-title" translate="FILTER.MEETING">MEETING</h1>
+					<div layout="row">
+						<md-input-container flex="35" class="md-block" moment-picker="ctrl.timepicker" format="HH:mm"> 
+					      <input ng-model="ctrl.timepicker" type="text" aria-label="Termin">
+					    </md-input-container>
+					    <md-input-container flex="65" class="md-block" moment-picker="ctrl.datepicker" format="YYYY/MM/DD"> 
+					      <input ng-model="ctrl.datepicker" type="text" aria-label="Termin">
+					    </md-input-container> 
+					</div>
+				</div>
+			</div> 
+
+			<div flex="30" flex-xs="100" class=" ph-5 ">
+				<h1 class="md-title" translate="FILTER.DISTANCE">DISTANCE IN KM</h1>
+				<md-slider-container layout="row">
+			      <md-input-container flex="25">
+			        <input type="number" ng-model="vol" aria-label="volume" aria-controls="volume-slider">
+			      </md-input-container>
+			      <md-slider flex class="mt-25" ng-model="vol" min="0" max="100" aria-label="volume" id="volume-slider" class="md-accent" md-vertical
+			                 md-range></md-slider>
+			      </md-slider> 
+			    </md-slider-container>
+			</div>
+		</div>
+    </div>
+
+	<div>
+		<div class="h3  margin-top-neg-15 p-5" translate="FILTER.TECHNOLOGY_PREFERENCES">TECHNOLOGY PREFERENCES</div> 
+		<HR>
+		<div class="margin-top-neg-15" layout="row" layout-xs="column">
+			<div flex="5"></div>
+			<div flex="30" flex-xs="100">
+				<div class=" ph-5">
+				    <h1 class="md-title" translate="FILTER.INSTRUMENT">INSTRUMENT</h1>
+				    <md-input-container class="md-block"> 
+			          <input value="Intraoral Scanner"  aria-label="Instrument">
+			        </md-input-container>
+				</div>
+			</div>
+			<div flex="35" flex-xs="100">
+				<div class=" ph-5">
+				    <h1 class="md-title" translate="FILTER.PRODUCER">PRODUCER</h1>
+				    <md-select placeholder="Assign to creator" ng-model="creator" md-on-open="loadUsers()">
+				      <md-option ng-value="Carestream" selected="true">Carestream</md-option>
+				      <md-option ng-value="user" ng-repeat="user in [ '3M','Agent']">{{user}}</md-option>
+				    </md-select> 
+				</div>
+			</div>
+			<div flex="30" flex-xs="100">
+				<div class=" ph-5">
+				    <h1 class="md-title" translate="FILTER.MODEL">MODEL</h1>
+				    <md-select placeholder="Assign to Model" ng-model="model" md-on-open="loadUsers()">
+				      <md-option ng-value="CS-3600" selected="true">CS-3600</md-option>
+				      <md-option ng-value="user" ng-repeat="user in ['3M True Definition','Agent']">{{user}}</md-option>
+				    </md-select> 
+				</div>
+			</div> 
+
+		</div> 
+	</div>
+
+	<div >
+        <div class="h3 margin-top-neg-15" id="card.id" translate="FILTER.RESULTS" ng-click="vm.getDetail($event)">RESULTS</div> 
+        <HR>
+
+       <div flex layout="column" >
+            <div class="widget-group" layout="row" layout-wrap>
+                <!-- MS-CARD -->
+                <ms-card id="card.id" class="h-280"  
+	                template="'app/main/offer/views/filters/scan-agent/card/card.html'"  
+	                ng-repeat="card in vm.cards| limitTo: vm.query.limit: (vm.query.page -1) * vm.query.limit"  
+	                ng-model="card" flex="50" flex-xs="100" flex-gt-sm="33" 
+	                ng-click="vm.getDetail($event)">
+            	</ms-card> 
+                <!-- / MS-CARD -->
+            </div>  
+
+			<md-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="{{vm.scanAgents.length}}" 
+				md-on-paginate="vm.onPaginate" md-page-select>
+			</md-table-pagination>
+        </div>  
+    </div>
+</div> 

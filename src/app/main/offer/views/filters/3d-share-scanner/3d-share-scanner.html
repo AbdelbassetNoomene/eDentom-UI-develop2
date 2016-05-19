@@ -1,0 +1,155 @@
+<div layout="column" class="md-padding">
+	<div>
+		<div class="h3" translate="FILTER.YOU_ARE">YOU ARE</div> 
+		<HR>
+		<div layout="row" layout-xs="column"> 
+			<div flex="5"></div>
+			<div flex="30" flex-xs="100" class="ph-5">
+			    <h1 class="md-title" translate="FILTER.ROLE">ROLE</h1>
+			    <md-select placeholder="Assign to user" ng-model="user" md-on-open="loadUsers()">
+			      <md-option ng-value="Zahnarzt" ng-selected="true" translate="FILTER.DENTIST">DENTIST</md-option>
+			      <md-option ng-value="user" ng-repeat="user in ['Dental Labor','Agent']">{{user}}</md-option>
+			    </md-select>
+			</div>  
+
+			<div flex="50" flex-xs="100" class="ph-5">
+				<h1 class="md-title" translate="FILTER.DISTANCE">DISTANCE IN KM</h1>
+				<md-slider-container layout="row">
+			      <md-input-container flex="15">
+			        <input type="number" ng-model="vol" aria-label="volume" aria-controls="volume-slider">
+			      </md-input-container>
+			      <md-slider flex class="md-padding" ng-model="vol" min="0" max="100" aria-label="volume" id="volume-slider" class="md-accent" md-vertical
+			                 md-range></md-slider>
+			      </md-slider> 
+			    </md-slider-container>
+			</div>
+		</div>
+    </div>
+	<div>
+		<div class="md-subhead p-5" translate="FILTER.DURATION">DURATION</div> 
+		<HR>
+		<span class="h5 m-30 bold md-pink-200-fg">3D-Share Scanner basiert auf 1/2 Tags-und 1 oder mehr Tage Share Dauer</span>
+		 
+		<div layout="column">
+			<div class=" " layout="row" layout-xs="column">
+				<div flex="5"></div>
+				<div flex="30" flex-xs="100">
+					<div class="ph-5">
+					    <h1 class="subhead" translate="FILTER.STAR_DATE">Start date</h1>
+					    <!-- <div class="mv-10 p-5"
+					         flex="50"
+						     moment-picker="ctrl.datepicker"
+						     format="YYYY-MM-DD"> 
+						    <input class="form-control p-8"
+						           placeholder="Select a date"
+						           ng-model="ctrl.datepicker"
+						           ng-model-options="{ updateOn: 'blur' }">
+						</div> -->
+						<md-datepicker ng-model="startDate" md-placeholder="Enter date"></md-datepicker>
+					</div>
+				</div>
+				<div flex="30" flex-xs="100">
+					<div class="ph-5">
+					    <h1 class="subhead" translate="FILTER.END_DATE">END date</h1> 
+					    <!-- <div class="mv-10 "
+					    	 flex="50"
+						     moment-picker="ctrl.datepicker"
+						     format="YYYY-MM-DD"> 
+						    <input class="form-control p-8"
+						           placeholder="Select a date"
+						           ng-model="ctrl.datepicker"
+						           ng-model-options="{ updateOn: 'blur' }">
+						</div>  -->
+						<md-datepicker ng-model="endDate" md-placeholder="Enter date"></md-datepicker>
+					</div>
+				</div>  
+			</div>
+
+			<div class=" " layout="row" layout-xs="column">
+				<div flex="5"></div>
+				<div flex="30" flex-xs="100">
+					<div class="ph-5">
+					    <h1 class="md-title" translate="FILTER.START_TIME">Time-Start</h1>
+					    <md-select placeholder="Assign to user" ng-model="user" md-on-open="loadUsers()">
+					      <md-option ng-value="8" ng-selected="true">8:00</md-option>
+					      <md-option ng-value="hour" ng-repeat="hour in ['9:00','10:00','11:00','12:00']">{{hour}}</md-option>
+					    </md-select>
+					</div>
+				</div>
+				<div flex="35" flex-xs="100">
+					<div class="ph-5">
+					    <h1 class="md-title" translate="FILTER.END_TIME">Time-End</h1>
+					    <md-select placeholder="Assign to user" ng-model="user" md-on-open="loadUsers()">
+					      <md-option ng-value="14" ng-selected="true">14:00</md-option>
+					      <md-option ng-value="time" ng-repeat="time in ['15:00','16:00','17:00','18:00']">{{time}}</md-option>
+					    </md-select>
+					</div>
+				</div>
+				<div flex="30" flex-xs="100">
+					<div class="ph-5">
+					    <h1 class="md-title" translate="FILTER.DAY_NUMBERS">DAY NUMBERS</h1>
+					    <md-input-container>
+					        <input type="number" ng-model="vol" aria-label="volume" aria-controls="volume-slider">
+					    </md-input-container>
+					</div>
+				</div> 
+			</div> 
+		</div>
+	</div>
+	<div>
+		<div class="md-subhead p-5" translate="FILTER.TECHNOLOGY_PREFERENCES">TECHNOLOGY PREFERENCES</div>
+		<HR>
+		<div layout="row" layout-xs="column">
+			<div flex="5"></div>
+			<div flex="30" flex-xs="100">
+				<div class="ph-5">
+				    <h1 class="md-title" translate="FILTER.INSTRUMENT">INSTRUMENT</h1>
+				    <md-input-container class="md-block"> 
+			          <input value="Intraoral Scanner"  aria-label="Instrument">
+			        </md-input-container>
+				</div>
+			</div>
+			<div flex="35" flex-xs="100">
+				<div class="ph-5">
+				    <h1 class="md-title" translate="FILTER.PRODUCER">PRODUCER</h1>
+				    <div layout="column">
+					    <md-select placeholder="Assign to creator" ng-model="creator" md-on-open="loadUsers()">
+					      <md-option ng-value="user" ng-repeat="user in ['Carestream','3M','Agent']">{{user}}</md-option>
+					    </md-select> 
+					</div> 
+				</div>
+			</div>
+			<div flex="30" flex-xs="100">
+				<div class="ph-5 ">
+				    <h1 class="md-title" translate="FILTER.MODEL_ORAL_SCANNER">MODEL_ORAL_SCANNER</h1> 
+				    <div layout="column">
+					    <md-select placeholder="Assign to Model" ng-model="model" md-on-open="loadUsers()">
+					      <md-option ng-value="user" ng-repeat="user in ['CS 3600','3M True Definition','Agent']">{{user}}</md-option>
+					    </md-select> 
+					</div> 
+				</div>
+			</div> 
+
+		</div> 
+	</div>
+	<div >
+        <div class="md-subhead" translate="FILTER.RESULTS">RESULTS</div> 
+        <HR>
+       <div flex layout="column" >
+            <div class="widget-group md-padding" layout="row" layout-wrap >
+                <!-- MS-CARD -->
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>    
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>    
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>
+                <ms-card template="'app/main/offer/views/card/card.html'" ng-model="vm.cards" flex="50" flex-gt-xs="33" ></ms-card>
+                <!-- / MS-CARD -->
+            </div>  
+        </div>  
+    </div>
+
+</div>  

@@ -1,0 +1,24 @@
+{
+    "REGISTER": {
+        "INTRO_TITLE": "Willkommen zu EdentOM!",
+        "INTRO_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum pellentesque. Sed mollis velit facilisis facilisis viverra.",
+        "TITLE": "Ein Konto erstellen",
+        "DESCRIPTION": "Sed mollis velit facilisis facilisis viverra",
+        "USERNAME": "Benutzername",
+        "NAME": "Name",
+        "EMAIL": "E-Mail",
+        "PASSWORD": "Passwort",
+        "PASSWORD_CONFIRM": "Passwort Bestatigen", 
+        "READ_ACCEPT": "gelesen und akzeptiert",
+        "TERMS_COND": "Geschäftsbedingungen",
+        "ALREADY_HAVE": "Hast du schon ein Konto?",
+        "CREATE_ACCOUNT": "Ein Konto erstellen",
+        "ERRORS": {
+            "USERNAME_REQUIRED": "Benutzername Feld ist erforderlich",
+            "EMAIL_REQUIRED": "E-mail Feld ist erforderlich",
+            "EMAIL_MUST_VALID": "E-Mail muss eine gültige E-Mail-Adresse sein ",
+            "PASSWORD_REQUIRED": "Passwort Feld ist erforderlich",
+            "PASSWORD_CONFIRM_REQUIRED": "Passwort (Bestatigen) ist erforderlich"
+        }
+    }
+}

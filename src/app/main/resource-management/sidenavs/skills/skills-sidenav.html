@@ -1,0 +1,49 @@
+<!-- SIDENAV CONTENT -->
+<md-content class="content" flex ms-scroll>
+ 
+  <div class="navigation-simple" layout="column">
+    <md-button class="item" aria-label="All Tasks" translate translate-attr-aria-label="SKILLS.SKILLS_MANAGEMENT">
+        <div layout="row" layout-align="start center">
+            <md-icon md-font-icon="icon-view-headline" class="s16"></md-icon>
+            <span class="title" translate="RESOURCE_MANAGEMENT.SKILLS.SKILLS_MANAGEMENT">SKILLS MANAGEMENT</span>
+        </div>
+    </md-button> 
+
+    <md-button class="item" aria-label="Starred" translate translate-attr-aria-label="SKILLS.INTRAORAL"
+               ng-click="vm.toggleFilterWithEmpty('starred')"
+               ng-class="{'selected':vm.taskFilters.starred}">
+        <md-icon md-font-icon="icon-star" class="s16"></md-icon>
+        <span class="title" translate="RESOURCE_MANAGEMENT.SKILLS.INTRAORAL"> INTRAORAL </span>
+    </md-button>
+
+    <md-button class="item" aria-label="Priority" translate translate-attr-aria-label="SKILLS.EXTRAORAL"
+               ng-click="vm.toggleFilterWithEmpty('important')"
+               ng-class="{'selected':vm.taskFilters.important}">
+        <md-icon md-font-icon="icon-alert-circle" class="s16"></md-icon>
+        <span class="title" translate="RESOURCE_MANAGEMENT.SKILLS.EXTRAORAL">EXTRAORAL</span>
+    </md-button>
+
+    <md-button class="item" aria-label="Priority" translate translate-attr-aria-label="SKILLS.EXTRAORAL"
+               ng-click="vm.toggleFilterWithEmpty('important')"
+               ng-class="{'selected':vm.taskFilters.important}">
+        <md-icon md-font-icon="icon-alert-circle" class="s16"></md-icon>
+        <span class="title" translate="RESOURCE_MANAGEMENT.SKILLS.IMPRINT">IMPRINT</span>
+    </md-button>
+
+    <md-button class="item" aria-label="Scheduled" translate translate-attr-aria-label="SKILLS.DESIGN"
+               ng-click="vm.toggleFilterWithEmpty('dueDate')"
+               ng-class="{'selected':vm.taskFilters.dueDate}">
+        <md-icon md-font-icon="icon-clock" class="s16"></md-icon>
+        <span class="title" translate="RESOURCE_MANAGEMENT.SKILLS.DESIGN"> 3D DESIGN</span>
+    </md-button>
+
+    <md-button class="item" aria-label="Today" translate translate-attr-aria-label="SKILLS.PURCHASE"
+               ng-click="vm.toggleFilterWithEmpty('startDate')"
+               ng-class="{'selected':vm.taskFilters.startDate}">
+        <md-icon md-font-icon="icon-calendar-today" class="s16"></md-icon>
+        <span class="title" translate="RESOURCE_MANAGEMENT.SKILLS.PURCHASE">PURCHASE</span>
+    </md-button>  
+  </div>
+
+</md-content>
+<!-- / SIDENAV CONTENT -->

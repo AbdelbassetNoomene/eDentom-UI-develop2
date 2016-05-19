@@ -1,0 +1,78 @@
+<div class="md-inline-form">
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Abformung" ng-model="vm.bridge.Abformung"
+                   placeholder="Abformung (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="bridge.$error"
+                 ng-show="bridge.Abformung.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Abformung field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Bissregistrat" ng-model="vm.bridge.Bissregistrat"
+                   placeholder="Bissregistrat (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="bridge.Bissregistrat.$error"
+                 ng-show="bridge.Bissregistrat.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Bissregistrat field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Archivierung" ng-model="vm.bridge.Archivierung"
+                   placeholder="Archivierung (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="bridge.$error"
+                 ng-show="bridge.Archivierung.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Archivierung field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Design" ng-model="vm.bridge.Design"
+                   placeholder="Design (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="bridge.Design.$error"
+                 ng-show="bridge.Design.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Design field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <div layout="row">
+        <span flex="40"></span>
+
+        <div>
+
+            <span class="h4"> Preisstaffelung von  </span> 
+
+            <md-input-container class="w-50">
+              <input type="number" name="promotion" min="0" max="100" aria-label="promotion" ng-model="vm.bridge.promotion"> 
+            </md-input-container>
+
+            <span class="h4 ph-30"> % ab </span>
+
+            <md-input-container class="w-50">
+              <input type="number" name="teeth-number" min="0" max="100" aria-label="teeth-number" ng-model="vm.bridge.teethNumber"> 
+            </md-input-container> 
+
+            <span class="h4 ph-30"> Brücke (3 Glieder). </span>
+        </div>
+    </div>
+</div>

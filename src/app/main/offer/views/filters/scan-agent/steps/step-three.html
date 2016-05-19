@@ -1,0 +1,230 @@
+<div id="request-step-three" layout="column" ng-cloak>  
+
+  <div class="header-request" layout="column"> <!-- header --> 
+
+    <md-content class="timeline-tab" ng-include="'app/main/offer/views/filters/scan-agent/steps/info-agent.html'">
+    </md-content> 
+  </div><!--  end header -->  
+
+  <div class="content" layout="column" ms-scroll> <!-- content --> 
+
+    <div class="head h-35 mh-20" translate="STEPS.THREE.PLAN_SCAN">Plan Scan-Einsatz Zusammenfassung</div> 
+
+    <div class="h-30 mh-20 sky-blue-bg" layout="row">
+      <span class="text-uppercase font-size-12 pv-5" flex="50" translate="STEPS.THREE.NUMBER_TEETH"> Anzahl Zähne </span>
+      <span class="h4 white-bg grey-1000-fg border pv-5" flex="50"> 
+        {{ teethOperation.veneer.teethList.length + teethOperation.krone.teethList.length + teethOperation.bridge.teethList.length + teethOperation.inOnlay.teethList.length + teethOperation.implantat.teethList.length }} 
+      </span>
+    </div>
+
+    <!-- Venner -->
+    <div class="scan-operation" ng-repeat="operation in teethOperation"  ng-if="operation.teethList.length !== 0"> 
+
+      <div class="head h-35 mh-20" layout="row">
+
+        <span flex="40" translate="STEPS.THREE.SCAN_OPERATION_TYPE"> Typ der Scan-Operation </span>
+
+        <span class="light-blue-A100-fg" flex="25"> {{ operation.typeOperation }} </span>
+
+        <span flex="35" translate="STEPS.THREE.QUANTITY"> QUANTITY </span>
+
+        <span  >
+          <img  class="w-15 pt-8" src="../assets/images/etc/down.png" ng-if="vm.expanded" ng-click="vm.expanded=false">
+          <img class="h-15 " src="../assets/images/etc/up.png" ng-if="!vm.expanded" ng-click="vm.expanded = true">
+        </span>
+      </div>
+
+      <div ng-if="vm.expanded">
+
+        <div class="detail">
+
+          <div class="h-25 mh-25" layout="row">   
+            <span class="sky-blue-bg  pv-5" flex="65" translate="STEPS.THREE.IMPRESSION">IMPRESSION </span> 
+            <span class=" h4 grey-A200-bg grey-1000-fg pt-5" flex="35"> {{ operation.teethList.length }} </span> 
+          </div> 
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.TOOTH_NO"> TOOTH_NO </span>
+            <span class="grey-800-fg h4" flex="50"> 
+              <span  ng-repeat="tooth in operation.teethList"> {{ tooth + '  '}} </span>
+            </span>
+          </div>
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.PRICE_MEMBER"> UNIT PRICE  </span>
+            <span class="grey-800-fg h4" flex="50"> {{ operation.price.abform }} € </span>
+          </div>
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.COST_IMPRESSION"> COST_IMPRESSION </span>
+            <span class="grey-800-fg h4" flex="50"> {{ operation.teethList.length * operation.price.abform }} € </span>
+          </div>
+        </div> 
+
+        <div class="detail">
+
+          <div class="h-25 mh-25" layout="row">   
+            <span class="sky-blue-bg ph-50" flex="65" translate="STEPS.THREE.BISREGEISTRAT"> BISREGEISTRAT </span> 
+            <span class=" h4 grey-A200-bg grey-1000-fg pt-5" flex="35"> {{ operation.antagonistList.length }} </span> 
+          </div>   
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.TOOTH_NO"> TOOTH_NO </span>
+            <span class=" grey-800-fg h4" flex="50"> 
+               <span ng-repeat="tooth in operation.antagonistList"> {{ tooth + '  '}} </span> 
+            </span>
+          </div>
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.PRICE_MEMBER"> UNIT PRICE  </span>
+            <span class="grey-800-fg h4" flex="50"> {{operation.price.biregister}} € </span>
+          </div>
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.COST_BISREGEISTRAT"> Birgestratkosten </span>
+            <span class="grey-800-fg h4" flex="50"> {{ operation.price.biregister *  operation.antagonistList.length }}€ </span>
+          </div>
+        </div> 
+
+        <div class="detail">
+
+          <div class="h-25 mh-25" layout="row">   
+            <span class="sky-blue-bg ph-50" flex="65" translate="STEPS.THREE.ARCHIVING"> ARCHIVIERUNG </span> 
+            <span class=" h4 grey-A200-bg grey-1000-fg pt-5" flex="35"> {{ operation.antagonistList.length }}  </span> 
+          </div>  
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.BASIC_CHARGE"> BASIC CHARGE </span>
+            <span class="grey-800-fg h4" flex="50">{{operation.price.archivage}} € </span>
+          </div>
+
+          <div class="h-25 mh-30 border" layout="row">
+             <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.TOOTH_NO"> TOOTH_NO </span>
+            <span class=" grey-800-fg h4" flex="50"> 
+               <span ng-repeat="tooth in operation.antagonistList"> {{ tooth + ' '}} </span> 
+            </span> 
+          </div>
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.PRICE_PER_RECORD"> Preis pro Datensatz </span>
+            <span class="ph-25 grey-800-fg h4" flex="50">{{operation.price.archivage}} € </span>
+          </div>
+
+          <div class="h-25 mh-30 border" layout="row">
+            <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.ARCHIVING_COST"> ARCHIVING COST</span>
+            <span class="ph-25 grey-800-fg h4" flex="50"> {{ operation.antagonistList.length * operation.price.archivage }} € </span>
+          </div>
+        </div> 
+      </div>
+
+    </div>
+    <!-- Veneer -->  
+
+    <div class="scan-operation">
+
+      <div class="head h-35 mh-20">
+
+        <span translate="STEPS.THREE.PickUp_delivery_service"> Pick-up AND delivery service </span>
+
+        <img  class="w-15 pt-8" src="../assets/images/etc/down.png" ng-if="vm.expanded5" ng-click="vm.expanded5=false">
+        <img class="h-15 " src="../assets/images/etc/up.png" ng-if="!vm.expanded5" ng-click="vm.expanded5 = true">
+      </div>   
+
+      <div class="detail" ng-if="vm.expanded5"> 
+
+        <div class="h-25 mh-30 border" layout="row">
+          <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.DISTANCE"> DISTANCE </span>
+          <span class="ph-25 grey-800-fg h4" flex="50"> 2,5 km </span>
+        </div>
+
+        <div class="h-25 mh-30 border" layout="row">
+          <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.TRANSPORT_COST"> TRANSPORT COST </span>
+          <span class="ph-25 grey-800-fg h4" flex="50"> 4.50 € </span> 
+        </div>
+
+         <div class="h-25 mh-30 border" layout="row">
+          <span class="grey-A700-bg" flex="50" translate="STEPS.THREE.CHECK_IN"> CHECK IN</span>
+          <span class="ph-25 grey-800-fg h4" flex="50"> 20.20 min </span>
+        </div>
+      </div> 
+    </div>  
+
+    <div class="detail"> 
+
+      <div class="h-35 mh-20 border" layout="row">
+        <span class="grey-A700-bg pt-5" flex="50" translate="STEPS.THREE.SUBTOTAL"> SUBTOTAL </span>
+        <span class="ph-25 grey-800-fg h4 pt-5" flex="50"> 
+
+          {{ (teethOperation.veneer.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.krone.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.bridge.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.inOnlay.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage ))
+            + 
+             (teethOperation.implantat.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+          }} 
+          € 
+        </span>
+      </div>
+
+      <div class="h-35 mh-20 border" layout="row">
+        <span class="grey-A700-bg pt-5" flex="50" translate="STEPS.THREE.TAX_VALUE"> zzg. 19% Mwst </span>
+        <span class="ph-25 grey-800-fg h4 pt-5" flex="50"> 
+
+          {{ ( (teethOperation.veneer.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.krone.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.bridge.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.inOnlay.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage ))
+            + 
+             (teethOperation.implantat.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) ) * 0.19
+          }} 
+          €
+
+        </span>
+      </div>
+    </div>
+
+    <div class="detail">
+      <div class="sky-blue-bg h-35 mh-20 mt-5 p-5" translate="STEPS.THREE.TOTAL_DIGITALISATION"> TOTAL DIGITALISIERUNG </div>
+    </div>
+
+    <div class="detail">
+      <div class="sky-blue-bg h-35 mh-20 mt-5 p-5" translate="STEPS.THREE.CONTRACT_VALUE"> 
+        CONTRACT VALUE
+        <span class="ml-10">
+          {{ ( (teethOperation.veneer.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.krone.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.bridge.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) 
+            + 
+             (teethOperation.inOnlay.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage ))
+            + 
+             (teethOperation.implantat.teethList.length *(teethOperation.veneer.price.abform + 
+              teethOperation.veneer.price.biregister + teethOperation.veneer.price.archivage )) ) * 1.19
+          }} 
+          € 
+        </span> 
+      </div>
+    </div>
+  </div>   <!-- end content -->  
+</div>  

@@ -1,0 +1,24 @@
+<md-dialog class="revise-dialog" aria-label="Logout">
+    <form name="revise" class="md-inline-form" novalidate>
+        <md-toolbar class="md-accent md-hue-2">
+            <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+                <span class="title">{{vm.title}}</span>
+                <md-button class="md-icon-button" ng-click="vm.closeDialog()" aria-label="Close dialog">
+                    <md-icon md-font-icon="icon-close"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content ms-scroll>
+            <div layout="column">
+                <!--div class="alert alert-danger" ng-hide="!vm.error" id="error-message" ng-bind="vm.error"></div-->
+                <div>{{vm.message}}</div>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row" layout-align="space-between center">
+            <md-button ng-click="vm.confirm()"     class="md-raised" aria-label="Bestätigen">{{vm.confirmButton}}</md-button>
+            <md-button ng-click="vm.closeDialog()" class="md-raised" aria-label="Abbrechen">Abbrechen</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

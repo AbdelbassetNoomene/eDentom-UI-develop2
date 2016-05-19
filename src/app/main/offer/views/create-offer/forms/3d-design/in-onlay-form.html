@@ -1,0 +1,50 @@
+<div class="md-inline-form"> 
+    <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Design" ng-model="vm.inOnlay.Design"
+                   placeholder="Design (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="venner.Design.$error"
+                 ng-show="inOnlay.Design.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Design field is required.</span>
+                </div>
+            </div>
+        </md-input-container>
+        
+        <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="Archivierung" ng-model="vm.inOnlay.Archivierung"
+                   placeholder="Archivierung (Preis/Zahnglied)"
+                   required>
+            <div ng-messages="inOnlay.$error"
+                 ng-show="inOnlay.Archivierung.$touched"
+                 role="alert">
+                <div ng-message="required">
+                    <span>Archivierung field is required.</span>
+                </div>
+            </div>
+        </md-input-container> 
+    </div>
+
+    <div layout="row">
+      <span flex="40"></span>
+
+      <div>
+
+        <span class="h4"> Preisstaffelung von  </span> 
+
+        <md-input-container class="w-50">
+          <input type="number" name="promotion" min="0" max="100" aria-label="promotion" ng-model="vm.inOnlay.promotion"> 
+        </md-input-container>
+
+        <span class="h4 ph-30"> % ab </span>
+
+        <md-input-container class="w-50">
+          <input type="number" name="teeth-number" min="0" max="100" aria-label="teeth-number" ng-model="vm.inOnlay.teethNumber"> 
+        </md-input-container> 
+
+        <span class="h4 ph-30"> In-Onlay auf dem gesamten Preis. </span>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+{
+    "OFFER": {
+        "OFFER_NAV": " Angebote ",
+        "OFFER_SERVICE" : " Angebote abgeben ",
+        "OFFER_LIST" : " Angebotsliste ",
+        "OFFER_STATUS" : " Ausschreibungen(von-bis/Status) " 
+    },
+    "FILTER": {
+        "MOBILE_SCAN_AGENT": "Mobiler Scan-Agent ",
+        "DIGITIZE_IMPRINT" : "Abdruck Digitalisierung",
+        "3D_SHARE_SCANNER" : "SHARE 3D-SCANNER",
+        "3D_DESGIN"        : " 3D-Desgin",
+        "RESULTS"        : " ERGEBNISSE",
+        "MODEL"        : " MODELL",
+        "PRODUCER"        : " HERSTELLER",
+        "INSTRUMENT"        : " INSTRUMENT",
+        "TECHNOLOGY_PREFERENCES"        : " TECHNOLOGIE PRÄFERENZEN",
+        "DISTANCE"        : " ENFERNUNG IN KM",
+        "MEETING"        : " TERMIN",
+        "MEETING"        : " TERMIN",
+        "DENTIST"        : " ZAHNARZT",
+        "YOU_ARE"        : " SIE SIND", 
+        "ROLE"        : " ROLLE", 
+        "3D_FRAMEWORK"        : " 3D Framawork", 
+        "FILE_FORMAT"        : " Datenformat ", 
+        "DURATION"        : " DAUER ", 
+        "STAR_DATE"        : " Anfangsdatum ", 
+        "END_DATE"        : " Enddatum ", 
+        "START_TIME"        : " Uhrzeit-Start ", 
+        "END_TIME"        : " Uhrzeit-Ende ", 
+        "DAY_NUMBERS"        : " Anzahl - der  Tage ", 
+        "MODEL_ORAL_SCANNER"        : " MODELL - ORAL SCANNER " ,
+        "MAKING_REQUEST" : "MAKING REQUEST"
+    },
+    "COOKIES": {
+        "WARNING": "  Wir nutzen Cookies um ihnen eine bessere User Experience unsere Platform zu ermöglichen. Nutzen Sie weiter dieser Platform,so akzeptieren sie die Nutzung von Cookies.",
+        "VALIDATE" : " Validieren " 
+    },
+    "STEPS": {
+        "PRACTICE": "  zu Ihrer Praxis.",
+        "OFFER_MANAGEMENT": {
+            "TITLE": "Angebotsverwaltung",
+            "SCAN_AGENT": "Scan-Agent" 
+        },
+        "ONE": {
+            "3D_SCANNER_MODELL": "3D SCANNER MODELL",
+            "SCAN_OPERATION" : " SCAN OPERATION ", 
+            "IMPRESSION" : " IMPRESSION " ,
+            "PRICE" : " Preis " ,
+            "REGISTRAT" : " Bissregistrat " , 
+            "ARCHIVING" : " Archivierung " ,
+            "VENEER" : " VENEER " ,
+            "KRONE" : " KRONE " ,
+            "BRIDGE" : " Brücke (3 Glieder) " ,
+            "IN_ONLAY" : " IN/ONLAY " ,
+            "IMPLANTAT" : " IMPLANTAT " ,
+            "INCLUSIVE" : " Inklusiv "  
+        },
+        "THREE": {
+            "PLAN_SCAN": " Plan Scan-Einsatz Zusammenfassung", 
+            "NUMBER_TEETH" : " Anzahl Zähne " ,
+            "SCAN_OPERATION_TYPE" : " Typ der Scan-Operation " ,
+            "QUANTITY" : " Menge " ,
+            "IMPRESSION" : " IMPRESSION " ,
+            "TOOTH_NO" : " Zahn-Nr " ,
+            "PRICE_MEMBER" : " Preis/Glied " ,
+            "COST_IMPRESSION" : " Abformung Kosten " , 
+            "BISREGEISTRAT" : " BISREGEISTRAT " , 
+            "COST_BISREGEISTRAT" : " Birgestrat kosten " , 
+            "ARCHIVING" : " ARCHIVIERUNG " , 
+            "BASIC_CHARGE" : " Grundgebühr Verwaltungskosten pro Datensatz " , 
+            "PRICE_PER_RECORD" : " Preis pro Datensatz  ",  
+            "ARCHIVING_COST" : " Archivierung Kosten pro Datensatz ",  
+            "PickUp_delivery_service" : " Abhol-und Bringservice ",  
+            "DISTANCE" : " Strecke ",  
+            "TRANSPORT_COST" : " Transportkosten ",  
+            "CHECK_IN" : " Ankunftszeit in ",  
+            "SUBTOTAL" : " Zwischensumme ",  
+            "TAX_VALUE" : " zzgl. 19% Mwst ",  
+            "TOTAL_DIGITALISATION" : " TOTAL DIGITALISIERUNG  ",  
+            "CONTRACT_VALUE" : " AUFTRAGSSUMME  " 
+        },
+        "TWO": {
+            "SELECTION_OPERATION": "Auswahl der Operation",  
+            "VENEER" : " VENEER " ,
+            "KRONE" : " KRONE " ,
+            "BRIDGE" : " Brücke (3 Glieder) " ,
+            "IN_ONLAY" : " IN/ONLAY " ,
+            "IMPLANTAT" : " IMPLANTAT "   
+        }
+    },
+    "CAD_CAM": {
+        "CAD_CAM_NAV": " CAD-CAM ",
+        "INSTRUMENT_AVALIBILITY" : "ja/nein-Instrumente falls vorhande",
+        "SESSION_NUMBER" : " Anzahl Sitzungen pro Restauration ",
+        "HOME_VISIT" : " Hausbesuch ja/nein " 
+    }      
+}

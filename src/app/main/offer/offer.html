@@ -1,0 +1,61 @@
+<div id="offer" layout="column" layout-gt-sm="row">
+   <div flex="100" layout="column" flex-gt-sm="60" >
+       <md-tabs flex class="h-900 ps-scrollbar-y">
+        <md-tab>
+            <md-tab-label>
+                <span ui-sref="app.offer-mobileScanAgent" translate="FILTER.MOBILE_SCAN_AGENT">Mobile Scan-Agent</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content  ng-include="'app/main/offer/views/filters/scan-agent/scan-agent-filter.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+        <md-tab>
+            <md-tab-label>
+                <span ui-sref="app.offer-DigitalImprint" translate="FILTER.DIGITIZE_IMPRINT">DIGITIZE_IMPRINT</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content  ng-include="'app/main/offer/views/filters/digital-imprint/digital-imprint-filter.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+        <md-tab>
+            <md-tab-label>
+                <span    translate="FILTER.3D_SHARE_SCANNER">3D SHARE_SCANNER</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content  ng-include="'app/main/offer/views/filters/3d-share-scanner/3d-share-scanner.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+        <md-tab>
+            <md-tab-label>
+                <span translate="FILTER.3D_DESGIN">3D_DESGIN</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content  ng-include="'app/main/offer/views/filters/3d-desgin/3d-desgin-filter.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+   </md-tabs> 
+   </div>
+
+   <!-- Maps View -->
+   <div id="map_canvas" class="h-500" flex="100" flex-gt-sm="40">  
+
+        <div class="pannel-cookies w-325 h-150" layout="column" ng-if="vm.showCookiesWindows">
+            
+            <img src="../assets/images/etc/close-button.png" ng-click="vm.removeCookiesWindows()">
+
+            <span translate="COOKIES.WARNING">
+                WARNING MSG  
+            </span>
+
+            <button type="submit" class="light-blue-A200-bg w-120 h-30 ml-75" translate="COOKIES.VALIDATE">
+              VALIDEREN
+            </button>   
+        </div>
+   </div>
+</div> 
+
+<md-content ng-include="'app/footer/footer.html'"></md-content>

@@ -1,0 +1,11 @@
+{
+    "SCAN_AGENT": {
+    	"TITLE":                 "Mobiler Scan-Agent",
+        "SCAN_AGENT_NAV":        "Mobiler Scan-Agent",
+        "PROTOCOL_FILE_BUTTON":  "Protokoll anschauen",
+        "INPUT_DATA_BUTTON":     "Eingangsdaten Analyse",
+        "PIS_OVERVIEW_BUTTON":   "Kennzahlen &Uuml;bersicht",
+        "PIS_STATISTICS_BUTTON": "Kennzahlen Statistik",
+        "BILLENGINE_PIS_BUTTON": "BillEngine Kennzahlen"
+    }
+}

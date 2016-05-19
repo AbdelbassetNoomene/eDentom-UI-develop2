@@ -1,0 +1,39 @@
+<div class="template">
+    <div class="info white-fg"> 
+        <div class="rating" layout="row">
+            <div flex="90" >
+                <md-icon md-font-icon="icon-star" class="mh-5 mt-10 s20 yellow-800-fg"></md-icon>   
+                <md-icon md-font-icon="icon-star" class="mh-5 mt-10 s20 yellow-800-fg"></md-icon>   
+                <md-icon md-font-icon="icon-star" class="mh-5 mt-10 s20 yellow-800-fg"></md-icon>   
+                <md-icon md-font-icon="icon-star-half" class="mh-5 mt-10 s20 yellow-800-fg"></md-icon>   
+                <md-icon md-font-icon="icon-star-outline" class="mh-5 mt-10 s20 yellow-800-fg"></md-icon>    
+            </div> 
+            <md-icon md-font-icon class="icon-checkbox-marked-circle status s20"></md-icon>
+        </div> 
+        <div class="detail p-15">
+            <div class="light-blue-A100-fg" ng-if="card.labo">
+                {{card.labo}}
+            </div>
+            <div id="#info-labo">
+                <div class="h5" ng-if="card.dentistName">
+                    <strong > {{card.dentistName}}</strong>
+                </div>
+                <div class="h5 mv-5" ng-if="card.adress">
+                    {{card.adress}} {{card.town}}
+                </div>  
+                <div class="h5 mv-5" ng-if="card.tel">
+                   Tel: {{card.tel}}
+                </div>
+                 
+
+                <div class=" h5 light-blue-A100-fg" ng-if="card.competence">
+                    <a href="#">{{card.competence}}</a>
+                </div> 
+            </div> 
+        </div>
+    </div>
+
+    <div class="media">
+         <img id="card.id" class="image" ng-src="{{card.media.image.src}}" alt="{{card.media.image.alt}}" ng-show="card.media.image" ng-click="vm.getDetail($event)">
+    </div>
+</div>

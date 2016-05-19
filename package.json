@@ -6,11 +6,7 @@
     "karma": "^0.13.22"
   },
   "scripts": {
-    "test": "gulp test",
-    "build": "gulp",
-    "start": "node app.js"
-    
-    
+    "postinstall": "echo postinstall time; ./node_modules/gulp/bin/gulp build"
   },
   "devDependencies": {
     "browser-sync": "~2.9.11",

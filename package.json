@@ -6,7 +6,8 @@
     "karma": "^0.13.22"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "gulp serve"
     
   },
   "devDependencies": {

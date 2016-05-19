@@ -7,7 +7,9 @@
   },
   "scripts": {
     "test": "gulp test",
-    "start": "gulp serve"
+    "build": "gulp",
+    "start": "node app.js"
+    
     
   },
   "devDependencies": {

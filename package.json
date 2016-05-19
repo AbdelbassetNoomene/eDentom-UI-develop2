@@ -6,9 +6,7 @@
     "karma": "^0.13.22"
   },
   "scripts": {
-    "test": "gulp test",
-    "start": "node app",
-  "postinstall": "gulp default"
+    "test": "gulp test"
     
   },
   "devDependencies": {

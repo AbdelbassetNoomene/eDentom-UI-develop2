@@ -6,7 +6,10 @@
     "karma": "^0.13.22"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "node app",
+  "postinstall": "gulp default"
+    
   },
   "devDependencies": {
     "browser-sync": "~2.9.11",

@@ -28,6 +28,14 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
   gulp.start('build');
 });*/
 
-gulp.task('heroku:production', function(){
+/*gulp.task('heroku:production', function(){
   runSeq('clean', 'build', 'minify')
-})
+})*/
+
+gulp.task('serveprod', function() {
+  connect.server({
+    root: '',
+    port: process.env.PORT || 5000, 
+    livereload: false
+  });
+});
